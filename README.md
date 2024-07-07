@@ -1,37 +1,37 @@
 # PRODIGY_DS_03
 
-ProdigyInfoTech_TASK3
+## ProdigyInfoTech_TASK3
 
-TASK 3: Decision Tree Classifier for Customer Purchase Prediction
+## TASK 3: Decision Tree Classifier for Customer Purchase Prediction
 This project demonstrates how to build a decision tree classifier to predict whether a customer will purchase a product or service based on their demographic and behavioral data from the Bank Marketing dataset.
 
-Dataset:
+## Dataset:
 The dataset used in this project is the Bank Marketing dataset, available on the UCI Machine Learning Repository.
 
-Steps:
+## Steps:
 
-Data Loading: Load the dataset and inspect columns.
+1.**Data Loading**: Load the dataset and inspect columns.
 
-Data Preprocessing: Encode categorical variables and split data into training and testing sets.
+2.**Data Preprocessing**: Encode categorical variables and split data into training and testing sets.
 
-Model Building: Build a decision tree classifier with specified pruning parameters.
+3.**Model Building**: Build a decision tree classifier with specified pruning parameters.
 
-Model Evaluation: Evaluate the classifier using accuracy score and classification report.
+4.**Model Evaluation**: Evaluate the classifier using accuracy score and classification report.
 
-Visualization: Visualize the decision tree to understand its structure.
+5.**Visualization**: Visualize the decision tree to understand its structure.
 
-How to Run:
-Clone the repository.
+## How to Run:
+1.Clone the repository.
 
-Ensure you have the necessary libraries installed (pandas, scikit-learn, matplotlib).
+2.Ensure you have the necessary libraries installed (pandas, scikit-learn, matplotlib).
 
-Place the dataset (bank.csv) in the same directory as the script.
+3.Place the dataset (bank.csv) in the same directory as the script.
 
-Run the script (decision_tree_classifier.py) to train the model and generate visualizations.
+4.Run the script (decision_tree_classifier.py) to train the model and generate visualizations.
 
 ## Code
 
-python
+```python
 
 # Import necessary libraries
 
@@ -54,10 +54,11 @@ df = pd.read_csv('bank.csv', sep=';')
 print("Columns in the dataset:")
 
 print(df.columns)
+```
 
 ![Screenshot 2024-07-07 104727](https://github.com/Chilukuri-NeethuReddy/PRODIGY_DS_03/assets/174725064/5deabde5-aae6-4aae-9a1a-9fafd05d2e33)
 
-python
+```python
 
 # Assuming 'y' is the target variable indicating purchase (yes/no)
 
@@ -72,12 +73,13 @@ categorical_cols = ['job', 'marital', 'education', 'default', 'housing', 'loan',
 X_encoded = pd.get_dummies(X, columns=categorical_cols)
 
 print(X_encoded)
+```
 
 ![Screenshot 2024-07-07 104850](https://github.com/Chilukuri-NeethuReddy/PRODIGY_DS_03/assets/174725064/3551cbcc-8231-4bfb-a7eb-529a3aa536a5)
 
 ![Screenshot 2024-07-07 104907](https://github.com/Chilukuri-NeethuReddy/PRODIGY_DS_03/assets/174725064/b005e490-e91b-46d7-974d-31326e09f9c2)
 
-python
+```python
 
 # Split data into training and testing sets
 
@@ -102,10 +104,11 @@ print("\nAccuracy:", accuracy_score(y_test, y_pred))
 print("\nClassification Report:")
 
 print(classification_report(y_test, y_pred))
+```
 
 ![Screenshot 2024-07-07 105030](https://github.com/Chilukuri-NeethuReddy/PRODIGY_DS_03/assets/174725064/2ad291d6-3dce-46ce-9a02-e72b98bceeb5)
 
-python
+```python
 
 # Visualize the decision tree
 
@@ -114,7 +117,9 @@ plt.figure(figsize=(20, 10))  # Set the figure size
 plot_tree(clf, filled=True, feature_names=list(X_encoded.columns), rounded=True, fontsize=12, class_names=['No Purchase', 'Purchase'])
 
 plt.show(block=True)
+```
 
+###   Decision tree
 ![Screenshot 2024-07-07 105145](https://github.com/Chilukuri-NeethuReddy/PRODIGY_DS_03/assets/174725064/406faab9-1081-45a9-872a-675698071301)
 
 
